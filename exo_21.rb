@@ -1,12 +1,15 @@
 puts "Salut, combien d'étages veux-tu entre 1 et 25 ?"
-nbr = Integer(gets.chomp)
+userfloor = Integer(gets.chomp)
+
+pyramide =[]
 
 
 x = 1
-f = 1
-nbr.times do
-  puts " " * f
-  puts "#" * x
-  x += 1
-  f += 1
+y = userfloor -x
+
+userfloor.times do
+  pyramide << "#{" "* y + "#" * x}"
+  x = x + 1
+  y = y - 1
 end
+puts pyramide
